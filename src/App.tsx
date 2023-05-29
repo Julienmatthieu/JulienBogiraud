@@ -1,7 +1,14 @@
 import { Grid, GridItem, Heading, Show } from "@chakra-ui/react";
 import JobGrid from "./components/JobGrid";
+import LanguageList from "./components/LanguageList/LanguageList";
+import { Language } from "./hooks/useLanguages";
+import { useState } from "react";
 
 function App() {
+  const [selectedLanguage, setCurrentLanguage] = useState<Language>(
+    {} as Language
+  );
+
   return (
     <Grid
       templateAreas={{
@@ -14,8 +21,11 @@ function App() {
         nav
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" backgroundColor="blue">
-          aside
+        <GridItem area="aside" paddingX={5}>
+          <LanguageList
+            selectedLanguage={selectedLanguage}
+            onSelectLanguage={(language) => setCurrentLanguage(language)}
+          ></LanguageList>
         </GridItem>
       </Show>
       <GridItem area="main">
