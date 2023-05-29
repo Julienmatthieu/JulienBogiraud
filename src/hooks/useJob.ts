@@ -4,9 +4,10 @@ export interface Job {
     id: number;
     title: string;
     role: string;
-    yearStart: number,
-    yearEnd: number,
     desc: string;
+    tech: string[],
+    isLead: true,
+    durationMonths: number
   }
 
 const useGenres = () => ({data: jobs, isLoading: false, error: false});

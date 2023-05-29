@@ -18,7 +18,12 @@ import { FaVuejs } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import { DiPython } from "react-icons/di";
 
-const LanguageIconList = () => {
+interface Props {
+  languages: string[];
+  max?: number;
+}
+
+const LanguageIconList = ({ languages, max = 5 }: Props) => {
   type NewType = IconType;
 
   const iconMap: { [key: string]: NewType } = {
@@ -38,12 +43,11 @@ const LanguageIconList = () => {
     cucumber: SiCucumber,
     css: SiCss3,
   };
-  let languages = ["c", "c#"];
 
   return (
     <HStack marginY={1}>
-      {languages.map((language) => (
-        <Icon key={language} as={iconMap[language]} color="gray.500"></Icon>
+      {languages.slice(0, max).map((language) => (
+        <Icon key={language} as={iconMap[language]} color="gray.400"></Icon>
       ))}
     </HStack>
   );
