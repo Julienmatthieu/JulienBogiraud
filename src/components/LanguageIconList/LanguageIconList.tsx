@@ -13,10 +13,14 @@ import {
   SiCucumber,
   SiCss3,
   SiTypescript,
+  SiRuby,
+  SiHtml5,
+  SiGnubash,
 } from "react-icons/si";
 import { FaVuejs } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import { DiPython } from "react-icons/di";
+import { Language } from "../../hooks/useLanguages";
 
 interface Props {
   languages: string[];
@@ -42,6 +46,9 @@ const LanguageIconList = ({ languages, max = 5 }: Props) => {
     anaconda: SiAnaconda,
     cucumber: SiCucumber,
     css: SiCss3,
+    ruby: SiRuby,
+    html: SiHtml5,
+    bash: SiGnubash,
   };
 
   return (

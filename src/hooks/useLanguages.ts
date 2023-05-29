@@ -4,7 +4,6 @@ export interface Language {
     id: number;
     name: string;
     slug: string
-    icon: string
   }
 
 const useLanguages = () => ({data: languages as Language[], isLoading: false, error: false});
