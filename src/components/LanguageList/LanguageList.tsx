@@ -26,7 +26,7 @@ const LanguageList = ({ selectedLanguage, onSelectLanguage }: Props) => {
       <List>
         {languages.map((language) => {
           return (
-            <ListItem paddingX={5} paddingY={1}>
+            <ListItem key={language.slug} paddingX={5} paddingY={1}>
               <HStack>
                 <Icon
                   key={language.id}

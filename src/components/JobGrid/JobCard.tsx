@@ -14,7 +14,7 @@ const JobCard = ({ job }: Props) => {
       <Image src={tarrot}></Image>
       <CardBody>
         <HStack marginBottom={2} justifyContent="space-between">
-          <LanguageIconList languages={job.tech}></LanguageIconList>
+          <LanguageIconList languages={job.languages}></LanguageIconList>
           <JobBagdes job={job}></JobBagdes>
         </HStack>
         <Heading fontSize="2xl">{job.title}</Heading>

@@ -2,11 +2,21 @@ import { SimpleGrid, Text } from "@chakra-ui/react";
 import JobCard from "./JobCard";
 import JobCardContainer from "./JobCardContainer";
 import JobCardSkeleton from "./JobCardSkeleton";
-import useJob from "../../hooks/useJob";
+import useJob, { Job } from "../../hooks/useJob";
+import { Language } from "../../hooks/useLanguages";
 
-const JobGrid = () => {
+interface Props {
+  selectedLanguage: Language | null;
+}
+
+const JobGrid = ({ selectedLanguage }: Props) => {
   const { data: jobs, isLoading, error } = useJob();
   const skeletons = [1, 2, 3, 4, 5, 6];
+
+  const isShowable = (job: Job, language: string | undefined) => {
+    if (language === undefined) return true;
+    return job.languages.includes(language);
+  };
 
   if (error) return <Text>{error}</Text>;
 
@@ -24,11 +34,14 @@ const JobGrid = () => {
             </JobCardContainer>
           ))}
         {!isLoading &&
-          jobs.map((job) => (
-            <JobCardContainer key={job.id}>
-              <JobCard job={job} key={job.id}></JobCard>
-            </JobCardContainer>
-          ))}
+          jobs.map(
+            (job) =>
+              isShowable(job, selectedLanguage?.slug) && (
+                <JobCardContainer key={job.id}>
+                  <JobCard job={job} key={job.id}></JobCard>
+                </JobCardContainer>
+              )
+          )}
       </SimpleGrid>
     </>
   );

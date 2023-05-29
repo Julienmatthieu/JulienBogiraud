@@ -5,12 +5,12 @@ export interface Job {
     title: string;
     role: string;
     desc: string;
-    tech: string[],
+    languages: string[],
     isLead: true,
     durationMonths: number
   }
 
-const useGenres = () => ({data: jobs, isLoading: false, error: false});
+const useGenres = () => ({data: jobs as Job[], isLoading: false, error: false});
 // Minimalising data call for stable data
 // useData<Genre>('/jobs');
 

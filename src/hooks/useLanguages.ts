@@ -7,7 +7,7 @@ export interface Language {
     icon: string
   }
 
-const useLanguages = () => ({data: languages, isLoading: false, error: false});
+const useLanguages = () => ({data: languages as Language[], isLoading: false, error: false});
 // Minimalising data call for stable data
 // useData<Genre>('/jobs');
 

@@ -30,7 +30,7 @@ function App() {
       </Show>
       <GridItem area="main">
         <Heading>Experiences</Heading>
-        <JobGrid></JobGrid>
+        <JobGrid selectedLanguage={selectedLanguage}></JobGrid>
       </GridItem>
     </Grid>
   );
