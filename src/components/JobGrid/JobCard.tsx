@@ -23,7 +23,7 @@ const JobCard = ({ job, onCLick }: Props) => {
         <Heading fontSize="2xl">{job.title}</Heading>
         <HStack justifyContent={"space-between"}>
           <Text>{job.role}</Text>
-          {job.isLead && <Badges color="green" label="Lead"></Badges>}
+          {job.isLead && <Badges color="teal" label="Lead"></Badges>}
         </HStack>
       </CardBody>
     </Card>

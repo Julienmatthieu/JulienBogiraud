@@ -1,7 +1,7 @@
 import { Badge } from "@chakra-ui/react";
 
 interface Props {
-  color?: "yellow" | "green";
+  color?: "yellow" | "teal";
   label: string;
 }
 
