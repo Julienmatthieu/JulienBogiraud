@@ -1,10 +1,10 @@
-import { Grid, GridItem, Heading, Show } from "@chakra-ui/react";
+import { Grid, GridItem, Show } from "@chakra-ui/react";
 import JobGrid from "./components/JobGrid";
 import LanguageList from "./components/LanguageList/LanguageList";
 import { Language } from "./hooks/useLanguages";
 import { useState } from "react";
 import Navbar from "./components/NavBar/Navbar";
-import language from "./data/language";
+import JobTitle from "./components/JobTitle/JobTitle";
 
 export interface AppQuery {
   language: Language | null;
@@ -44,10 +44,7 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <Heading>
-          Experiences {appQuery.language ? appQuery.language.name : ""}{" "}
-          {appQuery.searchText ? '"' + appQuery.searchText + '"' : ""}
-        </Heading>
+        <JobTitle appQuery={appQuery}></JobTitle>
         <JobGrid appQuery={appQuery}></JobGrid>
       </GridItem>
     </Grid>
