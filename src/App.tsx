@@ -62,7 +62,6 @@ function App() {
         </Show>
         <JobGrid
           onCLick={(job) => {
-            console.table(job);
             setSelectedJob({ ...job });
           }}
           appQuery={appQuery}

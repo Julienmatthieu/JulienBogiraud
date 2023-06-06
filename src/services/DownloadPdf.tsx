@@ -12,7 +12,6 @@ const DownloadPdf = ({ size = "100%" }: Props) => {
     link.download = "JulienBogiraud_SOFTWARE ENGINEER";
 
     link.href = Pdf;
-    console.table(Pdf);
     link.click();
   };
   return (
