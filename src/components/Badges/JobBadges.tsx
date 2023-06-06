@@ -1,5 +1,5 @@
 import { Job } from "../../hooks/useJob";
-import Badges from "../Badges/Basges";
+import Badges from "./Basges";
 
 interface Props {
   job: Job;

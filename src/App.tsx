@@ -7,7 +7,7 @@ import Navbar from "./components/NavBar/Navbar";
 import JobTitle from "./components/JobTitle/JobTitle";
 import { Job } from "./hooks/useJob";
 import JobModal from "./components/JobModal/JobModal";
-import DownloadPdf from "./services/downloadPdf";
+import DownloadPdf from "./services/DownloadPdf";
 
 export interface AppQuery {
   language: Language | null;
