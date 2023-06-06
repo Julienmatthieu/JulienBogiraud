@@ -1,4 +1,4 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import JobGrid from "./components/JobGrid";
 import LanguageList from "./components/LanguageList/LanguageList";
 import { Language } from "./hooks/useLanguages";
@@ -7,6 +7,7 @@ import Navbar from "./components/NavBar/Navbar";
 import JobTitle from "./components/JobTitle/JobTitle";
 import { Job } from "./hooks/useJob";
 import JobModal from "./components/JobModal/JobModal";
+import DownloadPdf from "./services/downloadPdf";
 
 export interface AppQuery {
   language: Language | null;
@@ -44,10 +45,21 @@ function App() {
             selectedLanguage={appQuery.language}
             onSelectLanguage={(language) => onSelectLanguage(language)}
           ></LanguageList>
+          <DownloadPdf></DownloadPdf>
         </GridItem>
       </Show>
       <GridItem area="main">
-        <JobTitle appQuery={appQuery}></JobTitle>
+        <Show above="lg">
+          <HStack>
+            <JobTitle appQuery={appQuery}></JobTitle>
+          </HStack>
+        </Show>
+        <Show below="lg">
+          <HStack justifyContent={"space-around"}>
+            <JobTitle appQuery={appQuery}></JobTitle>
+            <DownloadPdf size="50%"></DownloadPdf>
+          </HStack>
+        </Show>
         <JobGrid
           onCLick={(job) => {
             console.table(job);

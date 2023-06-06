@@ -20,7 +20,7 @@ const LanguageList = ({ selectedLanguage, onSelectLanguage }: Props) => {
   if (error) return null;
   return (
     <>
-      <Heading fontSize="2xl" marginBottom={2} paddingY={3}>
+      <Heading fontSize="2xl" paddingY={3}>
         Langages
       </Heading>
       <List>
