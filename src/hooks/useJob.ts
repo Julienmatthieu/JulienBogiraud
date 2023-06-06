@@ -20,12 +20,12 @@ export interface Job {
 
   function isShowable(job: Job, appQuery: AppQuery): boolean {
     var language = appQuery?.language ? appQuery.language.slug : '';
-    var seachText = appQuery.searchText ? appQuery.searchText.toUpperCase() : '';
+    var seachText = appQuery.searchText ? appQuery.searchText : '';
     var isShowable = true;
 
     isShowable = (myIncludes(job.desc, seachText) || myIncludes(job.role, seachText) || myIncludes(job.title, seachText))
 
-    if (isShowable && (seachText === '' ||language !== ''))
+    if (isShowable && (seachText === '' || language !== ''))
     isShowable =  (job.languages.includes(language) || language === '')
     return isShowable;
   }
