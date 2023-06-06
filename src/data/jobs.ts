@@ -77,7 +77,7 @@ Technical Environment: Vue.js, .Net",
     },
     {
         id:50,
-        title: "Shift languagenology",
+        title: "Shift Technology",
         role: "Fullstack",
         yearStart: 2023,
         yearEnd: 2023,
