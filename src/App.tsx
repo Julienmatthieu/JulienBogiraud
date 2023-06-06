@@ -41,11 +41,11 @@ function App() {
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" paddingX={5}>
+          <DownloadPdf></DownloadPdf>
           <LanguageList
             selectedLanguage={appQuery.language}
             onSelectLanguage={(language) => onSelectLanguage(language)}
           ></LanguageList>
-          <DownloadPdf></DownloadPdf>
         </GridItem>
       </Show>
       <GridItem area="main">
