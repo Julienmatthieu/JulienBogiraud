@@ -3,6 +3,7 @@ import JobGrid from "./components/JobGrid";
 import LanguageList from "./components/LanguageList/LanguageList";
 import { Language } from "./hooks/useLanguages";
 import { useState } from "react";
+import Navbar from "./components/NavBar/Navbar";
 
 function App() {
   const [selectedLanguage, setCurrentLanguage] = useState<Language>(
@@ -17,8 +18,8 @@ function App() {
       }}
       templateColumns={{ base: "1fr", lg: "200px 1fr" }}
     >
-      <GridItem area="nav" backgroundColor="red">
-        nav
+      <GridItem area="nav">
+        <Navbar></Navbar>
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" paddingX={5}>
@@ -29,7 +30,9 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <Heading>Experiences {selectedLanguage ? selectedLanguage.name : ""}</Heading>
+        <Heading>
+          Experiences {selectedLanguage ? selectedLanguage.name : ""}
+        </Heading>
         <JobGrid selectedLanguage={selectedLanguage}></JobGrid>
       </GridItem>
     </Grid>
