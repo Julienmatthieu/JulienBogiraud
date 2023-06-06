@@ -19,7 +19,8 @@ export interface Job {
   }
 
   function isShowable(job: Job, appQuery: AppQuery): boolean {
-    var language = appQuery?.language ? appQuery.language.slug : '';
+    debugger;
+    var language = appQuery?.language?.slug ? appQuery.language.slug : '';
     var seachText = appQuery.searchText ? appQuery.searchText : '';
     var isShowable = true;
 
