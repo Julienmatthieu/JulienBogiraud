@@ -39,7 +39,7 @@ export default [
         Rôle: Conception, développement, déploiement et maintenance de l’outil SQCDI\
         Environnement technique : Angular 4, ASP Core .Net",
         languages: [
-            "dotnet, dotnetcore","python", "bash", "csharp", "angular"
+            "dotnet", "angular","python", "bash", "csharp", "dotnetcore",
         ],
         isLead: true,
         durationMonths: 35,
@@ -55,7 +55,7 @@ export default [
         Responsibilities: Build a database, gather AI’s data from Json files, stock data, build and provide API.\
         Technical Environment: C#, PostgreSQL, Python, Js\
         Methodology: AgilesApplication: ProovStation develops a range of high-tech vehicle scanners which, assisted by a combined array of optical technologies and AI, conduct a 360° scan of the vehicle. Responsibilities: Build a database, gather AI’s data from Json files, stock data, build and provide API. Technical Environment: C#, PostgreSQL, Python, Js Methodology: Agiles",
-        languages: ["dotnetcore", "postgresql", "docker", "vuejs", "C#"],
+        languages: ["dotnetcore", "postgresql", "docker", "vuejs", "csharp"],
         isLead: false,
         durationMonths: 12,
         image: "proovstation"
@@ -69,7 +69,7 @@ export default [
         desc: "Application: Engie's Darwin platform. This solution collects in real time data communicated by wind, solar, hydroelectric and biogas parks. Those datas are then crossed with other information, like weather forecasts to help operational teams improve their revenues.\
 Responsibilities: Develope, suggest design, create API, refactoring existing code. \
 Technical Environment: Vue.js, .Net",
-        languages: ["dotnetcore", "vuejs", "C#"],
+        languages: ["dotnetcore", "vuejs", "csharp"],
         isLead: false,
         durationMonths: 12,
         image: "exakis"

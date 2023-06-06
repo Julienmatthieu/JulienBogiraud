@@ -12,5 +12,7 @@ export default [
     {id:12,name:"Typescript", slug:"typescript", icon: "SiTyescript"},
     {id:13,name:"Anaconda", slug:"anaconda"},
     {id:14,name:"Cucumber", slug:"cucumber"},
-    {id:15,name:"Css", slug:"css"}
+    {id:15,name:"Css", slug:"css"},
+    {id:16, name:"Bash", slug:"bash"},
+    {id:17, name: "Ruby", slug:"ruby"}
 ];

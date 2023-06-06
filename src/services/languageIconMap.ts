@@ -1,19 +1,23 @@
 import {
-    SiJavascript,
-    SiDotnet,
-    SiCplusplus,
-    SiPostgresql,
-    SiAngular,
-    SiCsharp,
-    SiAnaconda,
-    SiC,
-    SiCucumber,
-    SiCss3,
-    SiTypescript,
+  SiJavascript,
+  SiDotnet,
+  SiCplusplus,
+  SiPostgresql,
+  SiAngular,
+  SiCsharp,
+  SiAnaconda,
+  SiC,
+  SiCucumber,
+  SiCss3,
+  SiTypescript,
+  SiHtml5,
+  SiRuby,
+  SiReact,
+  SiVuedotjs,
+  SiPython,
+  SiGnubash
   } from "react-icons/si";
-  import { FaVuejs } from "react-icons/fa";
   import { GrMysql } from "react-icons/gr";
-  import { DiPython } from "react-icons/di";
 import { IconType } from "react-icons";
 
 export const iconMap: { [key: string]: IconType } = {
@@ -26,10 +30,14 @@ export const iconMap: { [key: string]: IconType } = {
     javascript: SiJavascript,
     mysql: GrMysql,
     postgressql: SiPostgresql,
-    python: DiPython,
-    vuejs: FaVuejs,
+    python: SiPython,
+    vuejs: SiVuedotjs,
     typescript: SiTypescript,
     anaconda: SiAnaconda,
     cucumber: SiCucumber,
     css: SiCss3,
+    html: SiHtml5,
+    ruby: SiRuby,
+    react: SiReact,
+    bash: SiGnubash
   };
