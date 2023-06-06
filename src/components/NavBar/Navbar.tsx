@@ -3,11 +3,15 @@ import jmb from "../../assets/Jmbsmall.png";
 import SearchInput from "./SearchInput";
 import ColorModeSwitch from "./ColorModeSwitch";
 
-const Navbar = () => {
+interface Props {
+  onSearch: (searchText: string) => void;
+}
+
+const Navbar = ({ onSearch }: Props) => {
   return (
     <HStack padding="10px">
       <Image src={jmb} boxSize="60px" borderRadius={5}></Image>
-      <SearchInput onSearch={() => console.log("Search")}></SearchInput>
+      <SearchInput onSearch={onSearch}></SearchInput>
       <ColorModeSwitch></ColorModeSwitch>
     </HStack>
   );
