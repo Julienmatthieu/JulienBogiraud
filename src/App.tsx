@@ -5,10 +5,13 @@ import { Language } from "./hooks/useLanguages";
 import { useState } from "react";
 import Navbar from "./components/NavBar/Navbar";
 
+interface Query {
+  language: Language | null;
+  searchText: string;
+}
+
 function App() {
-  const [selectedLanguage, setCurrentLanguage] = useState<Language>(
-    {} as Language
-  );
+  const [appQuery, setAppQuery] = useState<Query>({} as Query);
 
   return (
     <Grid
@@ -19,21 +22,27 @@ function App() {
       templateColumns={{ base: "1fr", lg: "200px 1fr" }}
     >
       <GridItem area="nav">
-        <Navbar onSearch={() => console.log("searching...")}></Navbar>
+        <Navbar
+          onSearch={(searchText) =>
+            setAppQuery({ ...appQuery, searchText: searchText })
+          }
+        ></Navbar>
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" paddingX={5}>
           <LanguageList
-            selectedLanguage={selectedLanguage}
-            onSelectLanguage={(language) => setCurrentLanguage(language)}
+            selectedLanguage={appQuery.language}
+            onSelectLanguage={(language) =>
+              setAppQuery({ ...appQuery, language: language })
+            }
           ></LanguageList>
         </GridItem>
       </Show>
       <GridItem area="main">
         <Heading>
-          Experiences {selectedLanguage ? selectedLanguage.name : ""}
+          Experiences {appQuery.language ? appQuery.language.name : ""}
         </Heading>
-        <JobGrid selectedLanguage={selectedLanguage}></JobGrid>
+        <JobGrid selectedLanguage={appQuery.language}></JobGrid>
       </GridItem>
     </Grid>
   );
