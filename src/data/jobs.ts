@@ -10,7 +10,8 @@ export default [
         Possibilité de consulter les informations des patients, liste des rendez-vous et de suivre un patient en cours d'opération à distance grâce à appareil Mobil du style Ipad, Iphone. (ICP Conseil est la première société en France à proposer ce service).",
         languages: ["csharp", "css", "html"],
         isLead: true,
-        durationMonths: 14
+        durationMonths: 14,
+        image: "icpconseil"
     },
     {
         id:2,
@@ -23,7 +24,8 @@ export default [
        Conception, développement, intégration API véhicules, test, livraison, retouts client sur 3 projet de start-up",
         languages: ["ruby", "mysql", "cpp", "angular"],
         isLead: false,
-        durationMonths: 10
+        durationMonths: 10,
+        image: "rentacar"
     },
     {
         id:20,
@@ -40,7 +42,8 @@ export default [
             "dotnet, dotnetcore","python", "bash", "csharp", "angular"
         ],
         isLead: true,
-        durationMonths: 35
+        durationMonths: 35,
+        image: "alteca"
     },
     {
         id:30,
@@ -48,12 +51,14 @@ export default [
         role: "Backend",
         yearStart: 2021,
         yearEnd: 2021,
-        desc: "Des dev pour seb et tout",
-        languages: ["c", "cpp", "typescript", "python"],
+        desc: "Application: ProovStation develops a range of high-tech vehicle scanners which, assisted by a combined array of optical technologies and AI, conduct a 360° scan of the vehicle. \
+        Responsibilities: Build a database, gather AI’s data from Json files, stock data, build and provide API.\
+        Technical Environment: C#, PostgreSQL, Python, Js\
+        Methodology: AgilesApplication: ProovStation develops a range of high-tech vehicle scanners which, assisted by a combined array of optical technologies and AI, conduct a 360° scan of the vehicle. Responsibilities: Build a database, gather AI’s data from Json files, stock data, build and provide API. Technical Environment: C#, PostgreSQL, Python, Js Methodology: Agiles",
+        languages: ["dotnetcore", "postgresql", "docker", "vuejs", "C#"],
         isLead: false,
-        durationMonths: 6
-
-
+        durationMonths: 12,
+        image: "proovstation"
     },
     {
         id:40,
@@ -61,12 +66,14 @@ export default [
         role: "Fullstack",
         yearStart: 2022,
         yearEnd: 2022,
-        desc: "Des dev pour seb et tout",
-        languages: [],
+        desc: "Application: Engie's Darwin platform. This solution collects in real time data communicated by wind, solar, hydroelectric and biogas parks. Those datas are then crossed with other information, like weather forecasts to help operational teams improve their revenues.\
+Responsibilities: Develope, suggest design, create API, refactoring existing code. \
+Technical Environment: Vue.js, .Net",
+        languages: ["dotnetcore", "vuejs", "C#"],
         isLead: false,
-        durationMonths: 2
-
-
+        durationMonths: 12,
+        image: "exakis"
+        
     },
     {
         id:50,
@@ -74,9 +81,12 @@ export default [
         role: "Fullstack",
         yearStart: 2023,
         yearEnd: 2023,
-        desc: "Des dev pour seb et tout",
-        languages: [],
+        desc: "Application: Contribution to the development of the interface and back-end of a fraud detection solution for insurers\
+        Responsibilities: Create new test pipelines, Develop new features, Update add Api \
+        Technical Environment: C#, Python, React.Js, Octopus, TeamCity",
+        languages: ["csharp", "python", "react"],
         isLead: false,
-        durationMonths: 69
+        durationMonths: 8,
+        image: "shift"
     },
 ]

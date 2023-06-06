@@ -29,7 +29,7 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <Heading>Experiences</Heading>
+        <Heading>Experiences {selectedLanguage ? selectedLanguage.name : ""}</Heading>
         <JobGrid selectedLanguage={selectedLanguage}></JobGrid>
       </GridItem>
     </Grid>

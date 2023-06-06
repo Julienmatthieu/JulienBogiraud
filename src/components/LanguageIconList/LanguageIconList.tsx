@@ -1,26 +1,6 @@
 import { HStack, Icon } from "@chakra-ui/react";
 import { IconType } from "react-icons";
-
-import {
-  SiJavascript,
-  SiDotnet,
-  SiCplusplus,
-  SiPostgresql,
-  SiAngular,
-  SiCsharp,
-  SiAnaconda,
-  SiC,
-  SiCucumber,
-  SiCss3,
-  SiTypescript,
-  SiRuby,
-  SiHtml5,
-  SiGnubash,
-} from "react-icons/si";
-import { FaVuejs } from "react-icons/fa";
-import { GrMysql } from "react-icons/gr";
-import { DiPython } from "react-icons/di";
-import { Language } from "../../hooks/useLanguages";
+import { iconMap } from "../../services/languageIconMap";
 
 interface Props {
   languages: string[];
@@ -28,28 +8,6 @@ interface Props {
 }
 
 const LanguageIconList = ({ languages, max = 5 }: Props) => {
-  type NewType = IconType;
-
-  const iconMap: { [key: string]: NewType } = {
-    c: SiC,
-    cpp: SiCplusplus,
-    csharp: SiCsharp,
-    dotnet: SiDotnet,
-    dotnetcore: SiDotnet,
-    angular: SiAngular,
-    javascript: SiJavascript,
-    mysql: GrMysql,
-    postgressql: SiPostgresql,
-    python: DiPython,
-    vuejs: FaVuejs,
-    typescript: SiTypescript,
-    anaconda: SiAnaconda,
-    cucumber: SiCucumber,
-    css: SiCss3,
-    ruby: SiRuby,
-    html: SiHtml5,
-    bash: SiGnubash,
-  };
 
   return (
     <HStack marginY={1}>

@@ -7,7 +7,8 @@ export interface Job {
     desc: string;
     languages: string[],
     isLead: true,
-    durationMonths: number
+    durationMonths: number,
+    image: string
   }
 
 const useGenres = () => ({data: jobs as Job[], isLoading: false, error: false});

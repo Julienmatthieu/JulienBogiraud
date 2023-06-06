@@ -7,7 +7,7 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import useLanguages, { Language } from "../../hooks/useLanguages";
-import { iconMap } from "../../data/languageIconMap";
+import { iconMap } from "../../services/languageIconMap";
 
 interface Props {
   selectedLanguage: Language | null;
