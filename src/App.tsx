@@ -4,6 +4,7 @@ import LanguageList from "./components/LanguageList/LanguageList";
 import { Language } from "./hooks/useLanguages";
 import { useState } from "react";
 import Navbar from "./components/NavBar/Navbar";
+import language from "./data/language";
 
 export interface AppQuery {
   language: Language | null;
@@ -12,6 +13,12 @@ export interface AppQuery {
 
 function App() {
   const [appQuery, setAppQuery] = useState<AppQuery>({} as AppQuery);
+
+  function onSelectLanguage(language: Language): void {
+    if (appQuery.language && language.id === appQuery.language.id)
+      language = {} as Language;
+    setAppQuery({ ...appQuery, language: language });
+  }
 
   return (
     <Grid
@@ -32,9 +39,7 @@ function App() {
         <GridItem area="aside" paddingX={5}>
           <LanguageList
             selectedLanguage={appQuery.language}
-            onSelectLanguage={(language) =>
-              setAppQuery({ ...appQuery, language: language })
-            }
+            onSelectLanguage={(language) => onSelectLanguage(language)}
           ></LanguageList>
         </GridItem>
       </Show>
