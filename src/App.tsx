@@ -5,13 +5,13 @@ import { Language } from "./hooks/useLanguages";
 import { useState } from "react";
 import Navbar from "./components/NavBar/Navbar";
 
-interface Query {
+export interface AppQuery {
   language: Language | null;
   searchText: string;
 }
 
 function App() {
-  const [appQuery, setAppQuery] = useState<Query>({} as Query);
+  const [appQuery, setAppQuery] = useState<AppQuery>({} as AppQuery);
 
   return (
     <Grid
@@ -40,9 +40,10 @@ function App() {
       </Show>
       <GridItem area="main">
         <Heading>
-          Experiences {appQuery.language ? appQuery.language.name : ""}
+          Experiences {appQuery.language ? appQuery.language.name : ""}{" "}
+          {appQuery.searchText ? '"' + appQuery.searchText + '"' : ""}
         </Heading>
-        <JobGrid selectedLanguage={appQuery.language}></JobGrid>
+        <JobGrid appQuery={appQuery}></JobGrid>
       </GridItem>
     </Grid>
   );
