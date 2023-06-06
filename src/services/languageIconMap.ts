@@ -15,7 +15,8 @@ import {
   SiReact,
   SiVuedotjs,
   SiPython,
-  SiGnubash
+  SiGnubash,
+  SiDocker
   } from "react-icons/si";
   import { GrMysql } from "react-icons/gr";
 import { IconType } from "react-icons";
@@ -29,7 +30,7 @@ export const iconMap: { [key: string]: IconType } = {
     angular: SiAngular,
     javascript: SiJavascript,
     mysql: GrMysql,
-    postgressql: SiPostgresql,
+    postgresql: SiPostgresql,
     python: SiPython,
     vuejs: SiVuedotjs,
     typescript: SiTypescript,
@@ -39,5 +40,6 @@ export const iconMap: { [key: string]: IconType } = {
     html: SiHtml5,
     ruby: SiRuby,
     react: SiReact,
-    bash: SiGnubash
+    bash: SiGnubash,
+    docker: SiDocker
   };

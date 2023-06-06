@@ -6,7 +6,7 @@ export default [
     {id:6,name:"Angular", slug:"angular"},
     {id:7,name:"Javascript", slug:"javascript"},
     {id:8,name:"mysql", slug:"mysql"},
-    {id:9,name:"Postgressql", slug:"postgressql"},
+    {id:9,name:"Postgresql", slug:"postgresql"},
     {id:10,name:"Python", slug:"python"},
     {id:11,name:"Vuejs", slug:"vuejs"},
     {id:12,name:"Typescript", slug:"typescript", icon: "SiTyescript"},
@@ -14,5 +14,6 @@ export default [
     {id:14,name:"Cucumber", slug:"cucumber"},
     {id:15,name:"Css", slug:"css"},
     {id:16, name:"Bash", slug:"bash"},
-    {id:17, name: "Ruby", slug:"ruby"}
+    {id:17, name: "Ruby", slug:"ruby"},
+    {id: 18, name:"Docker", slug:"docker"}
 ];
