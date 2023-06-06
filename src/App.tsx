@@ -5,6 +5,7 @@ import { Language } from "./hooks/useLanguages";
 import { useState } from "react";
 import Navbar from "./components/NavBar/Navbar";
 import JobTitle from "./components/JobTitle/JobTitle";
+import { Job } from "./hooks/useJob";
 
 export interface AppQuery {
   language: Language | null;
@@ -13,6 +14,7 @@ export interface AppQuery {
 
 function App() {
   const [appQuery, setAppQuery] = useState<AppQuery>({} as AppQuery);
+  const [selectedJob, setSelectedJob] = useState({} as Job);
 
   function onSelectLanguage(language: Language): void {
     if (appQuery.language && language.id === appQuery.language.id)
@@ -45,7 +47,13 @@ function App() {
       </Show>
       <GridItem area="main">
         <JobTitle appQuery={appQuery}></JobTitle>
-        <JobGrid appQuery={appQuery}></JobGrid>
+        <JobGrid
+          onCLick={(job) => {
+            console.table(job);
+            setSelectedJob({ ...job });
+          }}
+          appQuery={appQuery}
+        ></JobGrid>
       </GridItem>
     </Grid>
   );

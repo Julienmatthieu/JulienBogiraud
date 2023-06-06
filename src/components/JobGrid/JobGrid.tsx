@@ -2,14 +2,15 @@ import { SimpleGrid, Text } from "@chakra-ui/react";
 import JobCard from "./JobCard";
 import JobCardContainer from "./JobCardContainer";
 import JobCardSkeleton from "./JobCardSkeleton";
-import useJob from "../../hooks/useJob";
+import useJob, { Job } from "../../hooks/useJob";
 import { AppQuery } from "../../App";
 
 interface Props {
   appQuery: AppQuery;
+  onCLick: (job: Job) => void;
 }
 
-const JobGrid = ({ appQuery }: Props) => {
+const JobGrid = ({ appQuery, onCLick }: Props) => {
   const { data: jobs, isLoading, error } = useJob(appQuery);
   const skeletons = [1, 2, 3, 4, 5, 6];
 
@@ -31,7 +32,7 @@ const JobGrid = ({ appQuery }: Props) => {
         {!isLoading &&
           jobs.map((job) => (
             <JobCardContainer key={job.id}>
-              <JobCard job={job} key={job.id}></JobCard>
+              <JobCard onCLick={onCLick} job={job} key={job.id}></JobCard>
             </JobCardContainer>
           ))}
       </SimpleGrid>

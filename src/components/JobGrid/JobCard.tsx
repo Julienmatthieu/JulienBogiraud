@@ -8,11 +8,12 @@ import Badges from "../Badges/Basges";
 
 interface Props {
   job: Job;
+  onCLick: (job: Job) => void;
 }
 
-const JobCard = ({ job }: Props) => {
+const JobCard = ({ job, onCLick }: Props) => {
   return (
-    <Card>
+    <Card onClick={() => onCLick(job)}>
       <Image src={jobImagesMap[job.image]}></Image>
       <CardBody>
         <HStack marginBottom={2} justifyContent="space-between">
