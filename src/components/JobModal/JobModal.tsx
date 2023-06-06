@@ -43,7 +43,7 @@ const JobModal = ({ job, onClose }: Props) => {
               </HStack>
             </GridItem>
           </Grid>
-          {job.desc}
+          {job.application}
         </ModalBody>
         <ModalFooter></ModalFooter>
       </ModalContent>
