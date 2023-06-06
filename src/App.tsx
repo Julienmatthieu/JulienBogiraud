@@ -1,16 +1,4 @@
-import {
-  Button,
-  Grid,
-  GridItem,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  Show,
-} from "@chakra-ui/react";
+import { Grid, GridItem, Show } from "@chakra-ui/react";
 import JobGrid from "./components/JobGrid";
 import LanguageList from "./components/LanguageList/LanguageList";
 import { Language } from "./hooks/useLanguages";
@@ -18,6 +6,7 @@ import { useState } from "react";
 import Navbar from "./components/NavBar/Navbar";
 import JobTitle from "./components/JobTitle/JobTitle";
 import { Job } from "./hooks/useJob";
+import JobModal from "./components/JobModal/JobModal";
 
 export interface AppQuery {
   language: Language | null;
@@ -67,19 +56,10 @@ function App() {
           appQuery={appQuery}
         ></JobGrid>
       </GridItem>
-      <Modal
-        isOpen={selectedJob?.id !== undefined}
+      <JobModal
+        job={selectedJob}
         onClose={() => setSelectedJob({} as Job)}
-      >
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{`${selectedJob.title} - ${selectedJob.role}`}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>{selectedJob.desc}</ModalBody>
-
-          <ModalFooter></ModalFooter>
-        </ModalContent>
-      </Modal>
+      ></JobModal>
     </Grid>
   );
 }
