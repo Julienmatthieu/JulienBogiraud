@@ -4,6 +4,7 @@ import { Card, CardBody, HStack, Heading, Image, Text } from "@chakra-ui/react";
 import LanguageIconList from "../LanguageIconList/LanguageIconList";
 import JobBagdes from "./JobBagdes";
 import { jobImagesMap } from "../../services/JobImageMap";
+import Badges from "../Badges/Basges";
 
 interface Props {
   job: Job;
@@ -19,7 +20,10 @@ const JobCard = ({ job }: Props) => {
           <JobBagdes job={job}></JobBagdes>
         </HStack>
         <Heading fontSize="2xl">{job.title}</Heading>
-        <Text>{job.role}</Text>
+        <HStack justifyContent={"space-between"}>
+          <Text>{job.role}</Text>
+          {job.isLead && <Badges color="green" label="Lead"></Badges>}
+        </HStack>
       </CardBody>
     </Card>
   );
