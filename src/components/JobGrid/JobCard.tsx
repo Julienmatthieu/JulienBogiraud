@@ -1,5 +1,4 @@
 import { Job } from "../../hooks/useJob";
-
 import { Card, CardBody, HStack, Heading, Image, Text } from "@chakra-ui/react";
 import LanguageIconList from "../LanguageIconList/LanguageIconList";
 import JobBagdes from "../Badges/JobBadges";

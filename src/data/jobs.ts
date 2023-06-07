@@ -9,7 +9,7 @@ export default [
         Développement sur mesure en fonction de la spécialité des clients. (Anesthésiste, Radiologues, Angiologues ...). En contact permanent avec les clients afin de pouvoir cerner leurs envies et besoin afin des les intégrer au logiciel. \
         Possibilité de consulter les informations des patients, liste des rendez-vous et de suivre un patient en cours d'opération à distance grâce à appareil Mobil du style Ipad, Iphone. (ICP Conseil est la première société en France à proposer ce service).",
         responsibilitie: "responsibilitie",
-        comment: "comment",
+        comment: "",
         languages: ["csharp", "css", "html"],
         isLead: true,
         durationMonths: 14,
@@ -58,11 +58,9 @@ export default [
         yearStart: 2021,
         yearEnd: 2021,
         application: "Application: ProovStation develops a range of high-tech vehicle scanners which, assisted by a combined array of optical technologies and AI, conduct a 360° scan of the vehicle. \
-        Responsibilities: Build a database, gather AI’s data from Json files, stock data, build and provide API.\
-        Technical Environment: C#, PostgreSQL, Python, Js\
-        Methodology: AgilesApplication: ProovStation develops a range of high-tech vehicle scanners which, assisted by a combined array of optical technologies and AI, conduct a 360° scan of the vehicle. Responsibilities: Build a database, gather AI’s data from Json files, stock data, build and provide API. Technical Environment: C#, PostgreSQL, Python, Js Methodology: Agiles",
-        responsibilitie: "responsibilitie",
-        comment: "comment",
+        Technical Environment: C#, PostgreSQL, Python, Js",
+        responsibilitie: "Build a database, gather AI’s data from Json files, stock data, build and provide API",
+        comment: "Methodology: Agiles",
         languages: ["dotnetcore", "postgresql", "docker", "vuejs", "csharp"],
         isLead: false,
         durationMonths: 12,
@@ -75,9 +73,8 @@ export default [
         yearStart: 2022,
         yearEnd: 2022,
         application: "Application: Engie's Darwin platform. This solution collects in real time data communicated by wind, solar, hydroelectric and biogas parks. Those datas are then crossed with other information, like weather forecasts to help operational teams improve their revenues.\
-Responsibilities: Develope, suggest design, create API, refactoring existing code. \
 Technical Environment: Vue.js, .Net",
-responsibilitie: "responsibilitie",
+responsibilitie: "Develope, suggest design, create API, refactoring existing code.",
 comment: "comment",
 languages: ["dotnetcore", "vuejs", "csharp"],
         isLead: false,
@@ -92,9 +89,8 @@ languages: ["dotnetcore", "vuejs", "csharp"],
         yearStart: 2023,
         yearEnd: 2023,
         application: "Application: Contribution to the development of the interface and back-end of a fraud detection solution for insurers\
-        Responsibilities: Create new test pipelines, Develop new features, Update add Api \
         Technical Environment: C#, Python, React.Js, Octopus, TeamCity",
-        responsibilitie: "responsibilitie",
+        responsibilitie: "Create new test pipelines, Develop new features, Update add Api",
         comment: "comment",
         languages: ["csharp", "python", "react"],
         isLead: false,
