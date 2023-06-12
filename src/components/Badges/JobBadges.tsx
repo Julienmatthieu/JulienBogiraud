@@ -6,7 +6,12 @@ interface Props {
 }
 
 const JobBagdes = ({ job }: Props) => {
-  return <Badges color="yellow" label={job.durationMonths + " ans"}></Badges>;
+  return (
+    <Badges
+      color="yellow"
+      label={`${job.durationMonths} ${job.durationMonths > 1 ? " ans" : " an"}`}
+    ></Badges>
+  );
 };
 
 export default JobBagdes;

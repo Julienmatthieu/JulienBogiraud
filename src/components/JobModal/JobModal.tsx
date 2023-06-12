@@ -45,7 +45,7 @@ const JobModal = ({ job, onClose }: Props) => {
                 {job.isLead && <LeadBadge short={false}></LeadBadge>}
               </HStack>
               <TextBlock label="Application">{job.application}</TextBlock>
-              <TextBlock label="Responsibilitées">
+              <TextBlock label="Responsibilités">
                 {job.responsibilitie}
               </TextBlock>
               {job.comment !== "" && (
