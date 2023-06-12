@@ -5,7 +5,7 @@ export default [
         role: "Fullstack",
         yearStart: 2023,
         yearEnd: 2023,
-        application: "Application: Contribution to the development of the interface and back-end of a fraud detection solution for insurers\
+        application: "Contribution to the development of the interface and back-end of a fraud detection solution for insurers\
         Technical Environment: C#, Python, React.Js, Octopus, TeamCity",
         responsibilitie: "Create new test pipelines, Develop new features, Update add Api",
         comment: "",
@@ -20,7 +20,7 @@ export default [
         role: "Fullstack",
         yearStart: 2022,
         yearEnd: 2022,
-        application: "Application: Engie's Darwin platform. This solution collects in real time data communicated by wind, solar, hydroelectric and biogas parks. Those datas are then crossed with other information, like weather forecasts to help operational teams improve their revenues.\
+        application: "Engie's Darwin platform. This solution collects in real time data communicated by wind, solar, hydroelectric and biogas parks. Those datas are then crossed with other information, like weather forecasts to help operational teams improve their revenues.\
 Technical Environment: Vue.js, .Net", 
 responsibilitie: "Develope, suggest design, create API, refactoring existing code.",
 comment: "",
@@ -36,7 +36,7 @@ languages: ["dotnetcore", "vuejs", "csharp", "javascript", "mysql", "typescript"
         role: "Backend",
         yearStart: 2021,
         yearEnd: 2021,
-        application: "Application: ProovStation develops a range of high-tech vehicle scanners which, assisted by a combined array of optical technologies and AI, conduct a 360° scan of the vehicle.",
+        application: "ProovStation develops a range of high-tech vehicle scanners which, assisted by a combined array of optical technologies and AI, conduct a 360° scan of the vehicle.",
         responsibilitie: "Build a database, gather AI’s data from Json files, stock data, build and provide API",
         comment: "Methodology: Agiles",
         languages: ["dotnetcore", "postgresql", "python", "docker", "vuejs", "csharp", "bash","javascript", "typescript", "css", "html"],
