@@ -1,5 +1,4 @@
 import { HStack, Icon } from "@chakra-ui/react";
-import { IconType } from "react-icons";
 import { iconMap } from "../../services/languageIconMap";
 
 interface Props {
@@ -8,7 +7,6 @@ interface Props {
 }
 
 const LanguageIconList = ({ languages, max = 5 }: Props) => {
-
   return (
     <HStack marginY={1}>
       {languages.slice(0, max).map((language) => (
