@@ -1,7 +1,6 @@
 export default [
     {id:2,name:"c++", slug:"cpp"},
     {id:3,name:"c#", slug:"csharp"},
-    {id:4,name:".Net", slug:"dotnet"},
     {id:5,name:".Net core", slug:"dotnetcore"},
     {id:6,name:"Angular", slug:"angular"},
     {id:7,name:"Javascript", slug:"javascript"},
