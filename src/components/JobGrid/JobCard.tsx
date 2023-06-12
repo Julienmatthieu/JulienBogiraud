@@ -12,7 +12,14 @@ interface Props {
 
 const JobCard = ({ job, onCLick }: Props) => {
   return (
-    <Card onClick={() => onCLick(job)}>
+    <Card
+      _hover={{
+        cursor: "pointer",
+        color: "teal.500",
+        transform: "translateY(2px)",
+      }}
+      onClick={() => onCLick(job)}
+    >
       <Image src={jobImagesMap[job.image]}></Image>
       <CardBody>
         <HStack marginBottom={2} justifyContent="space-between">
