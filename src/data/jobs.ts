@@ -9,7 +9,7 @@ export default [
         Technical Environment: C#, Python, React.Js, Octopus, TeamCity",
         responsibilitie: "Create new test pipelines, Develop new features, Update add Api",
         comment: "",
-        languages: ["csharp", "python", "react", "javascript", "mysql", "typescript","anaconda", "cucumber", "css", "html"],
+        languages: ["dotnetcore", "csharp", "python", "react", "javascript", "mysql", "typescript","anaconda", "cucumber", "css", "html"],
         isLead: false,
         durationMonths: 1,
         image: "shift"

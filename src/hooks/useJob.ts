@@ -18,15 +18,21 @@ export interface Job {
 
   function isShowable(job: Job, appQuery: AppQuery): boolean {
     var language = appQuery?.language?.slug ? appQuery.language.slug : '';
-    var seachText = appQuery.searchText ? appQuery.searchText : '';
+    var searchText = appQuery.searchText ? appQuery.searchText : '';
     var isShowable = true;
     var jobText = `${job.title} ${job.role} ${job.application} ${job.comment}`.toUpperCase();
     
-
-    isShowable = jobText.includes(seachText);
-
-    if (isShowable && (seachText === '' || language !== ''))
-    isShowable =  (job.languages.includes(language) || language === '')
+    isShowable = jobText.includes(searchText.toUpperCase());
+    if  (isShowable && searchText === '' || language !== '')
+    {
+      isShowable =  (job.languages.includes(language) || language === '')
+    }
+    if (!isShowable && searchText !== '')
+    {
+        const searchLanguage = searchText.replace('.', 'dot').toUpperCase();  
+        const langMatch = job.languages.filter(lang => lang.toUpperCase().includes(searchLanguage));
+        isShowable = langMatch.length > 0;
+    }
     return isShowable;
   }
 
